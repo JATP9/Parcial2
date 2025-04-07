@@ -1,4 +1,4 @@
-INSERT INTO video_juegos_entity (id, titulo, anio_lanzamiento, plataforma, duracion_horas) VALUES
+MERGE INTO video_juegos_entity (id, titulo, anio_lanzamiento, plataforma, duracion_horas) VALUES
                                                                                                ('11111111-1111-1111-1111-111111111111', 'The Legend of Zelda: Breath of the Wild', 2017, 'Nintendo Switch', 100),
                                                                                                ('22222222-2222-2222-2222-222222222222', 'God of War Ragnarok', 2022, 'PlayStation 5', 40),
                                                                                                ('33333333-3333-3333-3333-333333333333', 'Elden Ring', 2022, 'PlayStation 5', 90),
