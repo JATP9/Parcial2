@@ -14,29 +14,35 @@ import java.util.UUID;
 @AllArgsConstructor
 public class VideoJuegosEntity {
 
+    // ID único generado automáticamente
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @JsonProperty("id")
     private UUID id;
 
+    // Título del videojuego
     @JsonProperty("titulo")
     @NotBlank(message = "El título del videojuego es obligatorio")
     @Size(min = 2, max = 100, message = "El título debe tener entre 2 y 100 caracteres")
     private String titulo;
 
+    // Año de lanzamiento, debe ser un valor entre 1900 y 2099
     @JsonProperty("anioLanzamiento")
     @Pattern(regexp = "^(19|20)\\d{2}$", message = "El año debe ser un número de 4 dígitos válido (1900-2099)")
     private String anioLanzamiento;
 
+    // Plataforma en la que está disponible el videojuego
     @JsonProperty("plataforma")
     @NotBlank(message = "La plataforma es obligatoria")
     private String plataforma;
 
+    // Duración en horas del videojuego
     @JsonProperty("duracionHoras")
     @NotNull(message = "La duración en horas es obligatoria")
     @Min(value = 1, message = "La duración debe ser de al menos 1 hora")
     private Integer duracionHoras;
 
+    // Método para generar un UUID si no está presente
     @PrePersist
     public void generarUUID() {
         if (id == null) {
@@ -44,9 +50,14 @@ public class VideoJuegosEntity {
         }
     }
 
-    // Getters y setters
+    // Getters y Setters (Lombok los genera automáticamente gracias a @Data)
+
     public UUID getId() {
         return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
     }
 
     public String getTitulo() {

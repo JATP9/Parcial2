@@ -1,21 +1,7 @@
-MERGE INTO video_juegos_entity (id, titulo, anio_lanzamiento, plataforma, duracion_horas) VALUES
-                                                                                               ('11111111-1111-1111-1111-111111111111', 'The Legend of Zelda: Breath of the Wild', 2017, 'Nintendo Switch', 100),
-                                                                                               ('22222222-2222-2222-2222-222222222222', 'God of War Ragnarok', 2022, 'PlayStation 5', 40),
-                                                                                               ('33333333-3333-3333-3333-333333333333', 'Elden Ring', 2022, 'PlayStation 5', 90),
-                                                                                               ('44444444-4444-4444-4444-444444444444', 'Halo Infinite', 2021, 'Xbox Series X', 20),
-                                                                                               ('55555555-5555-5555-5555-555555555555', 'Super Mario Odyssey', 2017, 'Nintendo Switch', 50),
-                                                                                               ('66666666-6666-6666-6666-666666666666', 'Cyberpunk 2077', 2020, 'PC', 70),
-                                                                                               ('77777777-7777-7777-7777-777777777777', 'Red Dead Redemption 2', 2018, 'PlayStation 4', 120),
-                                                                                               ('88888888-8888-8888-8888-888888888888', 'Minecraft', 2011, 'Multiplataforma', 200),
-                                                                                               ('99999999-9999-9999-9999-999999999999', 'The Witcher 3: Wild Hunt', 2015, 'PC', 100),
-                                                                                               ('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa', 'Horizon Forbidden West', 2022, 'PlayStation 5', 60),
-                                                                                               ('bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb', 'Call of Duty: Modern Warfare II', 2022, 'PC', 30),
-                                                                                               ('cccccccc-cccc-cccc-cccc-cccccccccccc', 'Animal Crossing: New Horizons', 2020, 'Nintendo Switch', 150),
-                                                                                               ('dddddddd-dddd-dddd-dddd-dddddddddddd', 'FIFA 23', 2022, 'Multiplataforma', 25),
-                                                                                               ('eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee', 'Grand Theft Auto V', 2013, 'Multiplataforma', 90),
-                                                                                               ('ffffffff-ffff-ffff-ffff-ffffffffffff', 'Assassin''s Creed Valhalla', 2020, 'PlayStation 5', 85),
-                                                                                               ('10101010-1010-1010-1010-101010101010', 'Final Fantasy VII Remake', 2020, 'PlayStation 4', 40),
-                                                                                               ('20202020-2020-2020-2020-202020202020', 'Resident Evil Village', 2021, 'PC', 30),
-                                                                                               ('30303030-3030-3030-3030-303030303030', 'Destiny 2', 2017, 'PC', 100),
-                                                                                               ('40404040-4040-4040-4040-404040404040', 'Fortnite', 2017, 'Multiplataforma', 300),
-                                                                                               ('50505050-5050-5050-5050-505050505050', 'Apex Legends', 2019, 'Multiplataforma', 250);
+INSERT INTO video_juegos_entity (id, titulo, anioLanzamiento, plataforma, duracionHoras) VALUES
+                                                                                             ('1d7e0c0f-cff7-4f87-a2d4-e17b2f869def', 'The Legend of Zelda: Breath of the Wild', 2017, 'Nintendo Switch', 50),
+                                                                                             ('6f34e601-5786-4aaf-b3e7-f5e932c97eab', 'The Witcher 3: Wild Hunt', 2015, 'PC', 120),
+                                                                                             ('ff0ad43d-e876-48d8-87a5-e94df5ecb8e2', 'Red Dead Redemption 2', 2018, 'PlayStation 4', 60),
+                                                                                             ('3b99c91b-9d7d-4c38-b839-91d4c0b0f235', 'God of War', 2018, 'PlayStation 4', 30),
+                                                                                             ('e0fa7f70-d1eb-45ea-980f-efb3f9cc0c61', 'Cyberpunk 2077', 2020, 'PC', 70),
+                                                                                             ('aa58d251-5b3c-42d0-a742-2a15939de4b3', 'Minecraft', 2011, 'Multi-Plataforma', 150);
