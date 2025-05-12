@@ -14,6 +14,7 @@ import java.util.UUID;
 @AllArgsConstructor
 public class VideoJuegosEntity {
 
+
     // ID único generado automáticamente
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,9 +28,10 @@ public class VideoJuegosEntity {
     private String titulo;
 
     // Año de lanzamiento, debe ser un valor entre 1900 y 2099
-    @JsonProperty("anioLanzamiento")
+    @JsonProperty("anio_lanzamiento")
     @Pattern(regexp = "^(19|20)\\d{2}$", message = "El año debe ser un número de 4 dígitos válido (1900-2099)")
-    private String anioLanzamiento;
+    //@Column(name = "anio_lanzamiento")
+    private String anio_lanzamiento;
 
     // Plataforma en la que está disponible el videojuego
     @JsonProperty("plataforma")
@@ -37,10 +39,11 @@ public class VideoJuegosEntity {
     private String plataforma;
 
     // Duración en horas del videojuego
-    @JsonProperty("duracionHoras")
+    @JsonProperty("duracion_horas")
     @NotNull(message = "La duración en horas es obligatoria")
     @Min(value = 1, message = "La duración debe ser de al menos 1 hora")
-    private Integer duracionHoras;
+    //@Column(name = "duracion_horas")
+    private Integer duracion_horas;
 
     // Método para generar un UUID si no está presente
     @PrePersist
@@ -68,12 +71,14 @@ public class VideoJuegosEntity {
         this.titulo = titulo;
     }
 
-    public String getAnioLanzamiento() {
-        return anioLanzamiento;
+
+    public String getAnio_lanzamiento() {
+        return anio_lanzamiento;
     }
 
-    public void setAnioLanzamiento(String anioLanzamiento) {
-        this.anioLanzamiento = anioLanzamiento;
+
+    public void setAnio_lanzamiento(String anio_lanzamiento) {
+        this.anio_lanzamiento = anio_lanzamiento;
     }
 
     public String getPlataforma() {
@@ -84,11 +89,13 @@ public class VideoJuegosEntity {
         this.plataforma = plataforma;
     }
 
-    public Integer getDuracionHoras() {
-        return duracionHoras;
+
+    public Integer getDuracion_horas() {
+        return duracion_horas;
     }
 
-    public void setDuracionHoras(Integer duracionHoras) {
-        this.duracionHoras = duracionHoras;
+    public void setDuracion_horas(Integer duracion_horas) {
+        this.duracion_horas = duracion_horas;
     }
+
 }

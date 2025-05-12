@@ -59,9 +59,9 @@ public class VideoJuegosService {
     public ResponseEntity<?> actualizarVideojuego(UUID id, VideoJuegosEntity actualizado) {
         return repositorio.findById(id).map(vj -> {
             vj.setTitulo(actualizado.getTitulo());
-            vj.setAnioLanzamiento(actualizado.getAnioLanzamiento());
+            vj.setAnio_lanzamiento(actualizado.getAnio_lanzamiento());
             vj.setPlataforma(actualizado.getPlataforma());
-            vj.setDuracionHoras(actualizado.getDuracionHoras());
+            vj.setDuracion_horas(actualizado.getDuracion_horas());
             repositorio.save(vj);
             return ResponseEntity.ok(Collections.singletonMap("mensaje", "Videojuego actualizado con ID: " + vj.getId()));
         }).orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).body(
