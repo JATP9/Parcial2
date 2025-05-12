@@ -1,5 +1,6 @@
 package com.example.VideoJuegos1.service;
 
+
 import com.example.VideoJuegos1.entities.VideoJuegosEntity;
 import com.example.VideoJuegos1.repositories.VideoJuegosRepository;
 
@@ -59,9 +60,9 @@ public class VideoJuegosService {
     public ResponseEntity<?> actualizarVideojuego(UUID id, VideoJuegosEntity actualizado) {
         return repositorio.findById(id).map(vj -> {
             vj.setTitulo(actualizado.getTitulo());
-            vj.setAnio_lanzamiento(actualizado.getAnio_lanzamiento());
+            vj.setAnioLanzamiento(actualizado.getAnioLanzamiento());
             vj.setPlataforma(actualizado.getPlataforma());
-            vj.setDuracion_horas(actualizado.getDuracion_horas());
+            vj.setDuracionHoras(actualizado.getDuracionHoras());
             repositorio.save(vj);
             return ResponseEntity.ok(Collections.singletonMap("mensaje", "Videojuego actualizado con ID: " + vj.getId()));
         }).orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).body(
@@ -85,4 +86,10 @@ public class VideoJuegosService {
         respuesta.put("videojuegos", pagina.getContent());
         return ResponseEntity.ok(respuesta);
     }
+
+    public ResponseEntity<?> testFunction(){
+        List<VideoJuegosEntity> videojuego = repositorio.findAll();
+        return ResponseEntity.ok(videojuego);
+    }
+
 }

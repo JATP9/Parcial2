@@ -22,6 +22,11 @@ public class VideoJuegosControllers {
         this.videoJuegosService = videoJuegosService;
     }
 
+    @GetMapping("/test")
+    public ResponseEntity<?> test() {
+        return videoJuegosService.testFunction();
+    }
+
     @GetMapping
     public ResponseEntity<?> obtenerTodos(
             @RequestParam(defaultValue = "0") int pagina,
